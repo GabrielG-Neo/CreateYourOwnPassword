@@ -6,4 +6,4 @@ We are generating a random password after a series of commands asking what chara
 https://gabrielg-neo.github.io/RandomPassword/
 
 ## Sneak Peak
-(C:\Users\gabri\Pictures\Screenshots\Screenshot (3).png)
+![Password Generator] (C:\Users\gabri\Pictures\Screenshots\Screenshot (3).png)
