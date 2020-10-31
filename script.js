@@ -12,7 +12,8 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 
-function generatePassword() {
+function generatePassword(thePassword = thePassword + passwordLetr[index]) {
+  alert()
   var passwordLetr = [];
   var thePassword = [];
   
@@ -45,29 +46,33 @@ function generatePassword() {
     if (lowerCaseAns) {
       for( var i = 0; i < lowerCase.length; ++i) {
         passwordLetr.push(lowerCase[i]);
+        console.log()
       }
     }
 
     if (upperCaseAns) {
       for (var i = 0; i < upperCase.length; i++) {
         passwordLetr.push(upperCase[i]);
+        console.log()
       }
     }
 
     if (numericAns) {
       for (var i = 0; i < numeric.length; i++) {
         passwordLetr.push(numeric[i]);
+        console.log()
       }
     }
 
     if (specialCharAns) {
       for ( i = 0; i < specialChar.length; i++) {
         passwordLetr.push(specialChar[i]);
+        console.log()
       }
     }
     for (i = 0; i < numericPassLength; i++) {
       var index = Mathfloor(Math.random() + passwordLetr.length);
-      thePassword = thePassword + passwordLetr[index];
+      
       }
     }
     
