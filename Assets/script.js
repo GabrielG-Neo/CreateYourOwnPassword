@@ -3,16 +3,19 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
   var passwordText = document.querySelector("#password");
-  passwordText.value = password
+      passwordText.value = password
+  generatePassword();
 }
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-  var passwordLetr = "";
-  
+function generatePassword() {
+
+  var passwordLetr = [];
+  var thePassword = [];
   
   var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
   var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
@@ -23,7 +26,7 @@ generateBtn.addEventListener("click", writePassword);
 
     if (passwordLength < 8 || passwordLength > 128) {
       alert("Please choose a number between 8 and 128");
-      return;
+      return
     }
 
     else {alert("Your password will be "+ numCharLength +" charactors long")}
@@ -35,11 +38,11 @@ generateBtn.addEventListener("click", writePassword);
 
     if (!lowerCaseAns && !upperCaseAns && !numericAns && !specialCharAns) {
       alert("You must choose at least one charactor type.");
-      return;
+      return
     }
 
     if (lowerCaseAns) {
-      for( var i = 0; i < lowerCase.length; ++i) {
+      for( var i = 0; i < lowerCase.length; i++) {
         passwordLetr.push(lowerCase[i]);
         console.log();
       }
@@ -61,11 +64,19 @@ generateBtn.addEventListener("click", writePassword);
 
     if (specialCharAns) {
       for ( i = 0; i < specialChar.length; i++) {
-        passwordLetr.push(specialChar[i]);
-        console.log();
+        passwordLetr.push(specialCharAns[i]);
       }
     }
   
+    for (i = 0; i < numCharLength.Length; i++) {
+      var index = Math.floor(Math.random() * passwordLetr.length);
+
+      thePassword = thePassword+passwordLetr[index];
+    }
+
+   
+
+  }
   
-    
+  
   
