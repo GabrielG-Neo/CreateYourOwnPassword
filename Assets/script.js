@@ -9,6 +9,7 @@ function writePassword() {
   // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword());
 
+// This function will run through all the charactors and prompts needed to get the password info.
 function generatePassword() {
  
   var passwordLetr = [];
@@ -21,25 +22,26 @@ function generatePassword() {
   var passwordLength = prompt("Please choose charactors between 8 and 128.");
   var numCharLength = parseInt(passwordLength);
   
- 
+ // If the user does NOT choose a password between the specified numerals
     if (passwordLength < 8 || passwordLength > 128) {
       alert("Please choose a number between 8 and 128");
       return
     }
-
+ // Alerts the user the password will be the amount of charators entered
     else {alert("Your password will be "+ numCharLength +" charactors long")}
 
+ // Variables for the choice of charactors the user wants to use
     var lowerCaseAns = confirm("Would you like LOWER CASE charactors?");
     var upperCaseAns = confirm("Would you like UPPER CASE charactors?");
     var numericAns = confirm("Would you like any NUMBERS?");
     var specialCharAns = confirm("Would you like any SPECIAL CHARACTORS?");
   
-
+ // If the user does not choose any of the charactor choices
     if (!lowerCaseAns && !upperCaseAns && !numericAns && !specialCharAns) {
       alert("You must choose at least one charactor type.");
-      return
+      return;
     }
-
+ // If statements are pushed up to the empty variable passwordLetr if command is TRUE
      if (lowerCaseAns) {
       for( var i = 0; i < lowerCase.length; i++) {
         passwordLetr.push(lowerCase[i]);
@@ -67,7 +69,7 @@ function generatePassword() {
         console.log(specialCharAns);
       }
     }
-  
+ // For statment with Math Random to generate thePassword after all commands are answered
     for (i = 0; i < numCharLength; i++) {
       var index = Math.floor(Math.random() * passwordLetr.length);
       thePassword = thePassword + passwordLetr[index];
