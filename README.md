@@ -4,6 +4,7 @@ We are generating a random password after a series of commands asking what chara
 
 ## Links
 https://gabrielg-neo.github.io/RandomPassword/
+https://github.com/GabrielG-Neo/RandomPassword.git
 
 ## Sneak Peak
 ![password](https://user-images.githubusercontent.com/70115497/99889954-dd19dc80-2c1f-11eb-8f35-1ed5d0f78824.png)
